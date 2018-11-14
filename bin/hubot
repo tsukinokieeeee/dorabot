@@ -3,6 +3,21 @@
 set -e
 
 npm install
-export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 
-exec node_modules/.bin/hubot --name "dorabot" "$@"
+#ilm
+export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+#他と被らないPORTを指定する
+export PORT=8091 
+#slack token
+export HUBOT_SLACK_TOKEN=xoxb-233726729460-479305569797-qxiijRMrco5aSqFanZa5PXZ8
+#-a(--adaptor)でアダプターを決め打ちする
+exec node_modules/.bin/hubot --name "dorabot" "$@" -a slack 
+
+#other
+export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+#他と被らないPORTを指定する
+export PORT=8092
+#slack token
+export HUBOT_SLACK_TOKEN=xoxb-412764522016-479093127154-XgpPdo1cWnKF3LE6ae4TvPct
+#-a(--adaptor)でアダプターを決め打ちする
+exec node_modules/.bin/hubot --name "dorabot" "$@" -a slack 
