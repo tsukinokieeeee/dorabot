@@ -6,9 +6,6 @@ npm install
 
 #ilm
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
-#他と被らないPORTを指定する
-export PORT=8091
-#slack token
-export HUBOT_SLACK_TOKEN=xoxb-233726729460-479305569797-qxiijRMrco5aSqFanZa5PXZ8
+
 #-a(--adaptor)でアダプターを決め打ちする
 exec node_modules/.bin/hubot --name "dorabot" "$@" -a slack 
