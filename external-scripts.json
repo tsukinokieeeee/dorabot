@@ -8,5 +8,6 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-misawa"
+  "hubot-misawa",
+  "hubot-heroku-keepalive"
 ]
