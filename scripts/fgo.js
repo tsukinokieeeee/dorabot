@@ -1,5 +1,5 @@
 // Description:
-//   マシュbot
+// マシュbot
 
 module.exports = function(robot) {
 
