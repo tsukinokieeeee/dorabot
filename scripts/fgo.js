@@ -1,5 +1,5 @@
 // Description:
-//   飯決めてくれるbot
+//   マシュbot
 
 module.exports = function(robot) {
 
