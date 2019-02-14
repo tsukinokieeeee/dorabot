@@ -31,7 +31,7 @@ var gobi = ["「戦闘です。マスター、指示を」",
       as_user: false,
       text: response,
       username: "マシュ",
-      icon_url: "../img/mashe.jpg",
+      icon_url: "https://files.slack.com/files-pri/T6VMCMFDJ-FG7V5PLBZ/mashe.jpg",
             });
       });
 };
