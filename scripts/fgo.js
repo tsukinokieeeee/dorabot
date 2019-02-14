@@ -31,7 +31,7 @@ var gobi = ["「戦闘です。マスター、指示を」",
       as_user: false,
       text: response,
       username: "マシュ",
-      icon_url: "http://startcos.com/wp-content/uploads/2018/10/img_fate_mashe.jpg",
+      icon_url: "../img/mashe.jpg",
             });
       });
 };
