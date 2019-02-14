@@ -31,7 +31,7 @@ var gobi = ["「戦闘です。マスター、指示を」",
       as_user: false,
       text: response,
       username: "マシュ",
-      icon_url: "https://www.google.co.jp/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwijgI3S-LrgAhUIabwKHZONCPMQjRx6BAgBEAU&url=http%3A%2F%2Fstartcos.com%2Fcharacter%2Ffgo-matthew%2F&psig=AOvVaw3lWd-H8p1REfnRjauL2DSq&ust=1550224016055973",
+      icon_url: "http://startcos.com/wp-content/uploads/2018/10/img_fate_mashe.jpg",
             });
       });
 };
