@@ -63,7 +63,7 @@ var gobi = ["「戦闘です。マスター、指示を」",
 "「～～♪（きらきら星の鼻歌）～♪　……ひゃああっ！？　せ、先輩……？　いつからそこに……？」",
 ];
 
-      robot.respond(/fgo|マシュ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i, function(msg) {
+      robot.hear(/fgo|マシュ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i, function(msg) {
 
             var response = msg.random(gobi);
             msg.send({
