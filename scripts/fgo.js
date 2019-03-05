@@ -3,7 +3,7 @@
 
 module.exports = function(robot) {
 
-var gobi = ["「戦闘です。マスター、指示を」",
+var mashu = ["「戦闘です。マスター、指示を」",
 "「武装完了……行きます先輩！」",
 "「ステータスアップ……頑張ります」",
 "「最大火力、発揮します」",
@@ -63,16 +63,36 @@ var gobi = ["「戦闘です。マスター、指示を」",
 "「～～♪（きらきら星の鼻歌）～♪　……ひゃああっ！？　せ、先輩……？　いつからそこに……？」",
 ];
 
-      robot.hear(/fgo|マシュ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i, function(msg) {
+var davinchi = [
+"「ようこそ、ダ・ヴィンチちゃんの素敵なショップへ。何がお望みかな？」",
+"「準備は万端かい？ 転ばぬ先の何とやらだ。荷物はちょっと多いくらいが良いと思うよ？」",
+"「お望みのままに与えよう。もちろん、対価はお忘れなく」",
+"「いらっしゃいませ〜。カタログは、こちらでございま〜す」",
+];
 
-            var response = msg.random(gobi);
-            msg.send({
+      robot.hear(/fgo|マシュ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i,
+      	function(msg) {
+      var response = msg.random(mashu);
+      msg.send({
       as_user: false,
       text: response,
       username: "マシュ",
       icon_url: "https://lh3.googleusercontent.com/5fYMoGCc-Uzt8rfm2HTDSSSmhqycdGhgOKq5mZlha32enEHYZ2Ci4eNd7FcsyOthKRxqe3k=s85",
             });
       });
+
+      robot.hear(/fgo|ダヴィンチ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i,
+      	function(msg) {
+      var response = msg.random(davinchi);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ダ・ヴィンチちゃん",
+      icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
+            });
+      });
+
+
 };
 
 
