@@ -108,7 +108,7 @@ var muniel = [
       });
 
       /*ロリンチちゃん*/
-      robot.hear(/fgo|ダヴィンチ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて|ダビ|ロリンチちゃん|ロリ|/i,
+      robot.hear(/fgo|ダヴィンチ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて|ダビ|ロリンチちゃん|ロリ/i,
       	function(msg) {
       var response = msg.random(davinchi);
       msg.send({
