@@ -89,6 +89,7 @@ var marine = [
 "「好きなもの？　人間と、悪戯と、女の子だよ？　だって楽しいだろう？　いじるの」",
 "「マスター！　アルトリアと私を一緒にするとか、君は悪魔なのか！　い、いや嬉しい、すごく嬉しいんだけど……まだ心の整理がついてないというかだね？",
 ];
+
 var muniel = [
 "「駄目だこいつ…早くなんとかしない ...」",
 "「マスターの頼みだ、ボーナスぐらいつっこむぜ！」",
@@ -138,7 +139,7 @@ var muniel = [
       as_user: false,
       text: response,
       username: "ムニエル",
-      icon_url: "https://lh3.googleusercontent.com/F9bXKQv3RV-HF3ODqKRgTNth_A4T6-1TuOTf5SZB52OD_3TV0p4P-QlHq9YPD8gSwPGvS0U=s128",
+      icon_url: "https://lh3.googleusercontent.com/e57J6Zlr1sMpuO6Wmiii-J0c6tzqXjxYjlbtTY5oT4Tn0gp4D18J-bv4dySXZl4mcG7Vmg=s102",
             });
       });
 
