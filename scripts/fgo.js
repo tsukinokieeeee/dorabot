@@ -68,8 +68,24 @@ var davinchi = [
 "「準備は万端かい？ 転ばぬ先の何とやらだ。荷物はちょっと多いくらいが良いと思うよ？」",
 "「お望みのままに与えよう。もちろん、対価はお忘れなく」",
 "「いらっしゃいませ〜。カタログは、こちらでございま〜す」",
+"「マシュ、君は何を言っているんだい？」",
+"「TKBがそう言ってたよ。」",
+"「リツカ君、君はお布施が足りないんじゃないか？」",
 ];
 
+var marine = [
+"「ちゃりんちゃりんちゃり〜〜ん！お布施だお布施だー！」",
+"「王の話をするとしよう」",
+"「ホント、役立たずでごめん」",
+"「そこは壁もなく城もなく、国すらない始まりの空。地の底で輝く原初の星。──魂の在りかを見せようか。『永久に閉ざされた理想郷 (ガーデン・オブ・アヴァロン)』！」",
+"「ブフォウッ！」",
+"「な～に、何事もやればできるさ」",
+"「な～に、何事もやればできるさ」",
+"「好きなもの？　人間と、悪戯と、女の子だよ？　だって楽しいだろう？　いじるの」",
+"「マスター！　アルトリアと私を一緒にするとか、君は悪魔なのか！　い、いや嬉しい、すごく嬉しいんだけど……まだ心の整理がついてないというかだね？",
+];
+
+      /*マシュ*/
       robot.hear(/fgo|マシュ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i,
       	function(msg) {
       var response = msg.random(mashu);
@@ -81,7 +97,8 @@ var davinchi = [
             });
       });
 
-      robot.hear(/fgo|ダヴィンチ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i,
+      /*ダビンチちゃん*/
+      robot.hear(/fgo|ダヴィンチ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて|ダビ/i,
       	function(msg) {
       var response = msg.random(davinchi);
       msg.send({
@@ -89,6 +106,18 @@ var davinchi = [
       text: response,
       username: "ダ・ヴィンチちゃん",
       icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
+            });
+      });
+
+      /*マーリン*/
+      robot.hear(/fgo|マーリン|教祖|イケメン|神|アバロン|ガーデン|fgoやりたい|最新情報を教えて/i,
+            function(msg) {
+      var response = msg.random(marine);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "マーリン",
+      icon_url: "https://lh3.googleusercontent.com/XZODRZI9mJEbzSz-oUyyz8dC13EzDLGXR53aqVn4WBBm1s2YS7LE9M1OcLcM0q27c4RQ9w=s85",
             });
       });
 
