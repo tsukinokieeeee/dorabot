@@ -95,8 +95,24 @@ var muniel = [
 "「マスターの頼みだ、ボーナスぐらいつっこむぜ！」",
 ];
 
+var mashu_otsukaresama = [
+"「行ってきます、先輩っ！」",
+];
+
+var davinchi_otsukaresama = [
+"「発進準備、完了だ！早く早く！」",
+];
+
+var marine_otsukaresama = [
+"「おや、行くかい？」",
+];
+
+var muniel_otsukaresama = [
+"「今日も1日ご苦労さマシュ！」",
+];
+
       /*マシュ*/
-      robot.hear(/fgo|マシュ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i,
+      robot.hear(/fgo|マシュ|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i,
       	function(msg) {
       var response = msg.random(mashu);
       msg.send({
@@ -108,7 +124,7 @@ var muniel = [
       });
 
       /*ロリンチちゃん*/
-      robot.hear(/fgo|ダヴィンチ|お疲れ様|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて|ダビ|ロリンチちゃん|ロリ/i,
+      robot.hear(/fgo|ダヴィンチ|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて|ダビ|ロリンチちゃん|ロリ/i,
       	function(msg) {
       var response = msg.random(davinchi);
       msg.send({
@@ -120,7 +136,7 @@ var muniel = [
       });
 
       /*マーリン*/
-      robot.hear(/fgo|マーリン|お疲れ様|疲れた|眠い|帰りたい|はい|教祖|イケメン|神|アバロン|ガーデン|fgoやりたい|最新情報を教えて/i,
+      robot.hear(/fgo|マーリン|疲れた|眠い|帰りたい|はい|教祖|イケメン|神|アバロン|ガーデン|fgoやりたい|最新情報を教えて/i,
             function(msg) {
       var response = msg.random(marine);
       msg.send({
@@ -142,6 +158,57 @@ var muniel = [
       icon_url: "https://lh3.googleusercontent.com/e57J6Zlr1sMpuO6Wmiii-J0c6tzqXjxYjlbtTY5oT4Tn0gp4D18J-bv4dySXZl4mcG7Vmg=s102",
             });
       });
+
+
+            /*マーリン*/
+      robot.hear(/お疲れ様|おつかれさま|おつ|バイバイ|バイ/i,
+            function(msg) {
+      var response = msg.random(marine_otsukaresama);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "マーリン",
+      icon_url: "https://lh3.googleusercontent.com/XZODRZI9mJEbzSz-oUyyz8dC13EzDLGXR53aqVn4WBBm1s2YS7LE9M1OcLcM0q27c4RQ9w=s85",
+            });
+      });
+
+            /*マシュ*/
+      robot.hear(/お疲れ様|おつかれさま|おつ|バイバイ|バイ/i,
+            function(msg) {
+      var response = msg.random(mashu_otsukaresama);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "マシュ",
+      icon_url: "https://lh3.googleusercontent.com/5fYMoGCc-Uzt8rfm2HTDSSSmhqycdGhgOKq5mZlha32enEHYZ2Ci4eNd7FcsyOthKRxqe3k=s85",
+            });
+      });
+
+      /*ロリンチちゃん*/
+      robot.hear(/お疲れ様|おつかれさま|おつ|バイバイ|バイ/i,
+            function(msg) {
+      var response = msg.random(davinchi_otsukaresama);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ロリンチちゃん",
+      icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
+            });
+      });
+
+
+      /*ムニエル*/
+      robot.hear(/お疲れ様|おつかれさま|おつ|バイバイ|バイ/i,
+            function(msg) {
+      var response = msg.random(muniel_otsukaresama);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ムニエル",
+      icon_url: "https://lh3.googleusercontent.com/e57J6Zlr1sMpuO6Wmiii-J0c6tzqXjxYjlbtTY5oT4Tn0gp4D18J-bv4dySXZl4mcG7Vmg=s102",
+            });
+      });
+
 
 };
 
