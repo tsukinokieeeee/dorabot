@@ -264,19 +264,6 @@ var test = [
             });
       });
 
-      /*ロリンチちゃん*/
-      robot.hear(/テスト/i,
-            function(msg) {
-      var response = msg.random(test);
-      var tokent = 'xoxp-233726729460-233017019168-822641470689-7d745ef2042405939c55df0687485b0b';
-      msg.send({
-      token: tokent,
-      as_user: true,
-      text: response,
-      username: "かまくら",
-      icon_url: "https://lh3.googleusercontent.com/LDcBCR5K9Mn2OIolHQqlmmTdr0tl_oFb656Vrdx5AKUokglN-TgvQqmmcNQJklHC9dyV=s113",
-            });
-      });
 
 };
 
