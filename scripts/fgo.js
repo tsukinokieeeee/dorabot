@@ -167,7 +167,7 @@ var marine_ohayou = [
             function(msg) {
       var response = msg.random(muniel);
       msg.send({
-      as_user: true,
+      as_user: false,
       text: response,
       username: "ムニエル",
       icon_url: "https://lh3.googleusercontent.com/e57J6Zlr1sMpuO6Wmiii-J0c6tzqXjxYjlbtTY5oT4Tn0gp4D18J-bv4dySXZl4mcG7Vmg=s102",
