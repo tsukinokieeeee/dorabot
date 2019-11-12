@@ -123,7 +123,9 @@ var davinchi_ohayou = [
 var marine_ohayou = [
 "「おはよーかい？かいかいかい？かかかいかい？『永久に閉ざされた理想郷 (ガーデン・オブ・アヴァロン)』！」",
 ];
-
+var test = [
+"「これはテストです」",
+];
 
       //汎用レスポンス
       /*マシュ*/
@@ -259,6 +261,19 @@ var marine_ohayou = [
       text: response,
       username: "ロリンチちゃん",
       icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
+            });
+      });
+
+      /*ロリンチちゃん*/
+      robot.hear(/テスト/i,
+            function(msg) {
+      var response = msg.random(test);
+      msg.send({
+      token: xoxp-233726729460-233017019168-822641470689-7d745ef2042405939c55df0687485b0b,
+      as_user: false,
+      text: response,
+      username: "かまくら",
+      icon_url: "https://lh3.googleusercontent.com/LDcBCR5K9Mn2OIolHQqlmmTdr0tl_oFb656Vrdx5AKUokglN-TgvQqmmcNQJklHC9dyV=s113",
             });
       });
 
