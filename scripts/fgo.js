@@ -111,6 +111,21 @@ var muniel_otsukaresama = [
 "「今日も1日ご苦労さマシュ！」",
 ];
 
+
+var mashu_ohayou = [
+"「おはようございます。先輩！」",
+];
+
+var davinchi_ohayou = [
+"「よく眠れたかい？おはよう。マスターくん。」",
+];
+
+var marine_ohayou = [
+"「おはよーかい？かいかいかい？かかかいかい？『永久に閉ざされた理想郷 (ガーデン・オブ・アヴァロン)』！」",
+];
+
+
+      //汎用レスポンス
       /*マシュ*/
       robot.hear(/fgo|マシュ|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i,
       	function(msg) {
@@ -148,7 +163,7 @@ var muniel_otsukaresama = [
       });
 
       /*ムニエル*/
-      robot.hear(/は|これ|を/i,
+      robot.hear(/これ|を/i,
             function(msg) {
       var response = msg.random(muniel);
       msg.send({
@@ -159,7 +174,7 @@ var muniel_otsukaresama = [
             });
       });
 
-
+      //お疲れ様レスポンス
             /*マーリン*/
       robot.hear(/お疲れ様|おつかれさま|おつ|バイバイ|バイ/i,
             function(msg) {
@@ -209,6 +224,43 @@ var muniel_otsukaresama = [
             });
       });
 
+      //おはようレスポンス
+
+      /*マーリン*/
+      robot.hear(/おはよう|おは|朝/i,
+            function(msg) {
+      var response = msg.random(marine_ohayou);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "マーリン",
+      icon_url: "https://lh3.googleusercontent.com/XZODRZI9mJEbzSz-oUyyz8dC13EzDLGXR53aqVn4WBBm1s2YS7LE9M1OcLcM0q27c4RQ9w=s85",
+            });
+      });
+
+            /*マシュ*/
+      robot.hear(/おはよう|おは|朝/i,
+            function(msg) {
+      var response = msg.random(mashu_ohayou);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "マシュ",
+      icon_url: "https://lh3.googleusercontent.com/5fYMoGCc-Uzt8rfm2HTDSSSmhqycdGhgOKq5mZlha32enEHYZ2Ci4eNd7FcsyOthKRxqe3k=s85",
+            });
+      });
+
+      /*ロリンチちゃん*/
+      robot.hear(/おはよう|おは|朝/i,
+            function(msg) {
+      var response = msg.random(davinchi_ohayou);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ロリンチちゃん",
+      icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
+            });
+      });
 
 };
 
