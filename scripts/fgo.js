@@ -268,8 +268,9 @@ var test = [
       robot.hear(/テスト/i,
             function(msg) {
       var response = msg.random(test);
+      var tokent = 'xoxp-233726729460-233017019168-822641470689-7d745ef2042405939c55df0687485b0b';
       msg.send({
-      token: xoxp-233726729460-233017019168-822641470689-7d745ef2042405939c55df0687485b0b,
+      token: tokent,
       as_user: false,
       text: response,
       username: "かまくら",
