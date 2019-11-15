@@ -96,7 +96,7 @@ var muniel = [
 ];
 
 var mashu_otsukaresama = [
-"「行ってきます、先輩っ！」",
+"「行ってきます、マスター」",
 ];
 
 var davinchi_otsukaresama = [
