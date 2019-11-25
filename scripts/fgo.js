@@ -190,9 +190,16 @@ var davinchi_birthday = [
 var mashu_birthday = [
 "「お誕生日おめでとうございます。大変めでたいので、国を挙げての祭日にするべきではないでしょうか？」"
 ];
-//var hokusai_birthday = [
-//"「うーん、誕生日って言うんかい。ご祝儀も無しでもうしわけねぇが…どれェ、ひとつ老けて丸く賢くなった顔を書かせてくれェ"ますたあ殿"」"
-//];
+
+var hokusai_birthday = [
+"「うーん、誕生日って言うんかい。ご祝儀も無しでもうしわけねぇが…どれェ、ひとつ老けて丸く賢くなった顔を書かせてくれェ"ますたあ殿"」"
+];
+
+var holmes_birthday = [
+"「誕生日？ 君の？ もちろん知っているとも。言われずともね。机の上を見るといい。君に似合いそうなのもをいくつか選んでおいた。」"
+];
+
+
 
 var test = [
 "「マシュ ！」",
@@ -256,6 +263,18 @@ var test = [
       text: response,
       username: "ホームズ",
       icon_url: "https://lh3.googleusercontent.com/oRtLKVU2lK6ErgoWbVEIShvQaJL-Fo4eBejX3ujUwnwBRnC9Rxgc5kokAwiOTo4i9NE_hoE=s85",
+            });
+      });
+
+      /*北斎*/
+      robot.hear(/fgo|北斎|葛飾|疲れた|眠い|帰りたい|うん|はい|わかった|とと様|ととさま|タコ|筆|墨|fgoやりたい|最新情報を教えて/i,
+            function(msg) {
+      var response = msg.random(hokusai);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "北斎",
+      icon_url: "https://lh3.googleusercontent.com/khcovuOZ5Aso76W5UK-BVvn116Q8JcM0WikFQQoWg9RbMSuHvfBcLosnetcKAtpp2vDYqw=s97",
             });
       });
 
@@ -362,7 +381,7 @@ var test = [
       /*ホームズ*/
       robot.hear(/おはよう|おは|朝/i,
             function(msg) {
-      var response = msg.random(holmes_otsukaresama);
+      var response = msg.random(holmes_ohayou);
       msg.send({
       as_user: false,
       text: response,
@@ -371,9 +390,31 @@ var test = [
             });
       });
 
-      //誕生日レスポンス
 
-      /*北斎*/
+　　　　//誕生日レスポンス
+       /*北斎*/
+       robot.hear(/誕生日|hpb|バースデー|ハピバ/i,
+            function(msg) {
+      var response = msg.random(hokusai_birthday);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "北斎",
+      icon_url: "https://lh3.googleusercontent.com/khcovuOZ5Aso76W5UK-BVvn116Q8JcM0WikFQQoWg9RbMSuHvfBcLosnetcKAtpp2vDYqw=s97",
+            });
+      });
+
+      /*ロリンチちゃん*/
+      robot.hear(/fgo|誕生日|hpb|バースデー|ハピバ/i,
+            function(msg) {
+      var response = msg.random(davinchi_birthday);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ロリンチちゃん",
+      icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
+            });
+      });
 
 
 
