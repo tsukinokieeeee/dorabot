@@ -360,7 +360,7 @@ var test = [
       });
       
       /*ホームズ*/
-      robot.hear(/お疲れ様|おつかれさま|おつ|バイバイ|バイ/i,
+      robot.hear(/おはよう|おは|朝/i,
             function(msg) {
       var response = msg.random(holmes_otsukaresama);
       msg.send({
