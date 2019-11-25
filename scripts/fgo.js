@@ -95,6 +95,47 @@ var muniel = [
 "「マスターの頼みだ、ボーナスぐらいつっこむぜ！」",
 ];
 
+
+var holmes = [
+"「初歩的なことだ、友よ―――『初歩的なことだ、友よエレメンタリー・マイ・ディア』」",
+"「私はシャーロック・ホームズ。世界最高の探偵にして唯一の顧問探偵。」",
+"「探偵という概念の結晶、”明かす者”の代表―――キミたちを真相に導く、まさに最後の鍵という訳だ！」",
+"「ロンドンじゃなくてここで！？」",
+"「なに。初歩的な事だよ、諸君」",
+"「ふ。無垢なる少女に手放しで喜ばれるのなら、私もワトソンの小銭稼ぎも報われるというものだ。」",
+"「ホームズは実在した」",
+"「ははは、残念！ ミス・キリエライトほど私の事を知らないようだ！」",
+"「シャーロック・ホームズに沈黙はなく、自制もなく、また他人の迷惑も顧みない！」",
+"「私は私の推論を語るのみだ！」",
+"「いいや、私は打ち明ける！ 誰もがもう答えに気づいている以上はね！」",
+"「その上で真実から目を背けるのは愚か者のする事。ではミス・キリエライトは愚か者なのか？」",
+"「それは断じてノー！ ノーだベディヴィエール卿！ そもそも君は何を恐れているのか！」",
+"「真名を知っても何の変化もなかったら？ 真名を知っても宝具が展開されなかったら？」",
+"「それこそ不要な気遣いだと私は断言しよう！ 何故なら―――」",
+"「マシュ・キリエライトの精神は既に完成している！ 彼女の恐れは宝具のあるなしで変わるものではない！」",
+"「故に！ 宝具が展開しなかったとしても、彼女は立ち上がる事を止めないだろう！」",
+"「たったひとつ信じるものの為に、彼女は最後まで、勇気を振り絞って戦うのだから！」",
+"「ふむ。最後にお役に立てて何よりだ。私はここで、諸君らとはお別れだからね。」",
+"「ふむ。カルデアに謎があるのは確かだが、私は私で他に追う者がいる。」",
+"「その名は幻霊―――いや、今は語ることではないな。私はここで失礼するよ、ミス・リツカ。」",
+"「では、諸君、私はここで退散する！ 次に出会うとしたら、そうだね―――」",
+"「荒野ではなく、賑わいのある都市がいい！ ロンドンに並び立つような都市での活躍を期待しよう！」",
+"「理由は不明だが……。一つ……可能性として重要なものがある。」",
+"「……。……。いや、それは確定してからでないと話せない。あ、今『出たよソレ』という顔をしたね！うん、ワトソン君もしょっちゅうその表情になった。という訳で、何故ここに居るかの説明はおしまいだ！」",
+"「私と彼は、そういう人種なんだ。」",
+"「ははは、テンパってるな。」",
+"「キミと私が二人で呑んだ場合、恐らく最終的にどちらかがライヘンバッハるぞ。」",
+"「待たせてしまったかな？ でもそれは流してほしい。なにしろ、名探偵とは得てしてそういうものだからね。」",
+"「ほう！ それは是非とも試してみたい！」",
+"「正拳逆突き……ヤコブ絶命拳の構えだ。」",
+"「お待たせしたね。最後の相手はこの私、マスク・ド・バリツだ。」",
+"「バリツ！！（紳士かっこういいキック！）」",
+"「……さて。最後に、私から一つ質問していいだろうか？なぜ先程、ダ・ヴィンチは帰り道として下り階段ではなく窓を示したのか？まさかとは思うが―――」",
+"「真実に到達できたのならおめでとう。しかし不正解でも気を落とすことはない。正しい答えを出せなければ無価値というなら、価値のある人間はこの世で私だけになってしまうからね。」",
+"「ただ……錯誤、錯覚に根差した思考から誤った答えに到達してしまったとしても、真面目に悩み、考えた時間は誰にも否定できない。むしろ、それは貴方だけの“他にはない”体験だ。この数日の体験が少しでも楽しかったのであれば、成果はなくても意味はあるさ。人間は誰でも間違える。私でさえも。だからこそ試行錯誤しこうさくごの末に、究極の答えを目指す。」",
+];
+
+
 /*おつかれさま*/
 var mashu_otsukaresama = [
 "「行ってきます、マスター」",
@@ -112,6 +153,10 @@ var muniel_otsukaresama = [
 "「今日も1日ご苦労さマシュ！」",
 ];
 
+var holmes_otsukaresama = [
+"「……さて。最後に、私から一つ質問していいだろうか？なぜ君は帰宅できると思っているのか？まさかとは思うが―――」",
+];
+
 /*おはよう*/
 var mashu_ohayou = [
 "「おはようございます。先輩！」",
@@ -127,6 +172,10 @@ var marine_ohayou = [
 
 var marine_ohayou = [
 "「おはよう。そしてこんにちは、諸君。みんなの頼れる相談役、マーリンさんの登場だよ。」",
+];
+
+var holmes_ohayou = [
+"「グッドモーニング、ミス・リツカ」",
 ];
 
 /*誕生日*/
@@ -152,7 +201,7 @@ var test = [
       //汎用レスポンス
       /*マシュ*/
       robot.hear(/fgo|マシュ|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて/i,
-      	function(msg) {
+            function(msg) {
       var response = msg.random(mashu);
       msg.send({
       as_user: false,
@@ -164,7 +213,7 @@ var test = [
 
       /*ロリンチちゃん*/
       robot.hear(/fgo|ダヴィンチ|疲れた|眠い|帰りたい|はい|fgoやりたい|最新情報を教えて|ダビ|ロリンチちゃん|ロリ/i,
-      	function(msg) {
+            function(msg) {
       var response = msg.random(davinchi);
       msg.send({
       as_user: false,
@@ -195,6 +244,18 @@ var test = [
       text: response,
       username: "ムニエル",
       icon_url: "https://lh3.googleusercontent.com/e57J6Zlr1sMpuO6Wmiii-J0c6tzqXjxYjlbtTY5oT4Tn0gp4D18J-bv4dySXZl4mcG7Vmg=s102",
+            });
+      });
+
+      /*ホームズ*/
+      robot.hear(/fgo|ホームズ|シャーロック|疲れた|眠い|帰りたい|はい|探偵|バリ|ばり|ワトソン|fgoやりたい|最新情報を教えて/i,
+            function(msg) {
+      var response = msg.random(holmes);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ホームズ",
+      icon_url: "https://lh3.googleusercontent.com/oRtLKVU2lK6ErgoWbVEIShvQaJL-Fo4eBejX3ujUwnwBRnC9Rxgc5kokAwiOTo4i9NE_hoE=s85",
             });
       });
 
@@ -247,6 +308,18 @@ var test = [
       icon_url: "https://lh3.googleusercontent.com/e57J6Zlr1sMpuO6Wmiii-J0c6tzqXjxYjlbtTY5oT4Tn0gp4D18J-bv4dySXZl4mcG7Vmg=s102",
             });
       });
+      /*ホームズ*/
+      robot.hear(/お疲れ様|おつかれさま|おつ|バイバイ|バイ/i,
+            function(msg) {
+      var response = msg.random(holmes_otsukaresama);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ホームズ",
+      icon_url: "https://lh3.googleusercontent.com/oRtLKVU2lK6ErgoWbVEIShvQaJL-Fo4eBejX3ujUwnwBRnC9Rxgc5kokAwiOTo4i9NE_hoE=s85",
+            });
+      });
+
 
       //おはようレスポンス
 
@@ -283,6 +356,18 @@ var test = [
       text: response,
       username: "ロリンチちゃん",
       icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
+            });
+      });
+      
+      /*ホームズ*/
+      robot.hear(/お疲れ様|おつかれさま|おつ|バイバイ|バイ/i,
+            function(msg) {
+      var response = msg.random(holmes_otsukaresama);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ホームズ",
+      icon_url: "https://lh3.googleusercontent.com/oRtLKVU2lK6ErgoWbVEIShvQaJL-Fo4eBejX3ujUwnwBRnC9Rxgc5kokAwiOTo4i9NE_hoE=s85",
             });
       });
 
