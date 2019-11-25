@@ -250,7 +250,7 @@ var test = [
       });
 
       /*北斎*/
-      robot.hear(/眠い|ネムネム|ねむねむ/i,
+      robot.hear(/眠い|ネムネム|ねむねむ|疲れた|帰りたい/i,
             function(msg) {
       var response = msg.random(hokusai);
       msg.send({
