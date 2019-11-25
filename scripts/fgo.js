@@ -135,6 +135,11 @@ var holmes = [
 "「ただ……錯誤、錯覚に根差した思考から誤った答えに到達してしまったとしても、真面目に悩み、考えた時間は誰にも否定できない。むしろ、それは貴方だけの“他にはない”体験だ。この数日の体験が少しでも楽しかったのであれば、成果はなくても意味はあるさ。人間は誰でも間違える。私でさえも。だからこそ試行錯誤しこうさくごの末に、究極の答えを目指す。」",
 ];
 
+var hokusai = [
+"「ジメジメ辛気臭いのはご勘弁サ。縁起が悪くていけねぇよ。なぁ、とと様」",
+"「締め切りだの細けぇ注文だのうるせえ版元も、いなけりゃいねえで往生するから悩ましいよなぁ」",
+"「おやすみかい？ うし、おれの布団を探すから待っとくれ〜。どれどれどこへ埋もれたやら…」",
+];
 
 /*おつかれさま*/
 var mashu_otsukaresama = [
@@ -178,21 +183,6 @@ var holmes_ohayou = [
 "「グッドモーニング、ミス・リツカ」",
 ];
 
-/*誕生日*/
-var marine_birthday = [
-"「誕生日おめでとう。良いことはより良いことに、悪いことに喜劇として記憶される、実に喜ばしい一日だ」"
-];
-
-var davinchi_birthday = [
-"「誕生日、なんだろう？おめでとうマスターくん。お祝いに好きなものを作ってあげよう！バースデーケーキは当然として、ボーダーのミニチュアとか、どう？」"
-];
-
-var mashu_birthday = [
-"「お誕生日おめでとうございます。大変めでたいので、国を挙げての祭日にするべきではないでしょうか？」"
-];
-//var hokusai_birthday = [
-//"「うーん、誕生日って言うんかい。ご祝儀も無しでもうしわけねぇが…どれェ、ひとつ老けて丸く賢くなった顔を書かせてくれェ"ますたあ殿"」"
-//];
 
 var test = [
 "「マシュ ！」",
@@ -256,6 +246,18 @@ var test = [
       text: response,
       username: "ホームズ",
       icon_url: "https://lh3.googleusercontent.com/oRtLKVU2lK6ErgoWbVEIShvQaJL-Fo4eBejX3ujUwnwBRnC9Rxgc5kokAwiOTo4i9NE_hoE=s85",
+            });
+      });
+
+      /*北斎*/
+      robot.hear(/眠い|ネムネム|ねむねむ/i,
+            function(msg) {
+      var response = msg.random(hokusai);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "北斎",
+      icon_url: "https://lh3.googleusercontent.com/hPZupyrDfG8RO9oVtMYklpl9qyjEfyQOMY6j16RIewPHJGs5tKTIP0imMv3aOpx7B3t6WxE=s97",
             });
       });
 
@@ -362,7 +364,7 @@ var test = [
       /*ホームズ*/
       robot.hear(/おはよう|おは|朝/i,
             function(msg) {
-      var response = msg.random(holmes_otsukaresama);
+      var response = msg.random(holmes_ohayou);
       msg.send({
       as_user: false,
       text: response,
@@ -371,10 +373,7 @@ var test = [
             });
       });
 
-      //誕生日レスポンス
-
-      /*北斎*/
-
+      
 
 
 
