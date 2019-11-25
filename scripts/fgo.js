@@ -95,6 +95,7 @@ var muniel = [
 "「マスターの頼みだ、ボーナスぐらいつっこむぜ！」",
 ];
 
+/*おつかれさま*/
 var mashu_otsukaresama = [
 "「行ってきます、マスター」",
 ];
@@ -111,7 +112,7 @@ var muniel_otsukaresama = [
 "「今日も1日ご苦労さマシュ！」",
 ];
 
-
+/*おはよう*/
 var mashu_ohayou = [
 "「おはようございます。先輩！」",
 ];
@@ -127,6 +128,22 @@ var marine_ohayou = [
 var marine_ohayou = [
 "「おはよう。そしてこんにちは、諸君。みんなの頼れる相談役、マーリンさんの登場だよ。」",
 ];
+
+/*誕生日*/
+var marine_birthday = [
+"「誕生日おめでとう。良いことはより良いことに、悪いことに喜劇として記憶される、実に喜ばしい一日だ」"
+];
+
+var davinchi_birthday = [
+"「誕生日、なんだろう？おめでとうマスターくん。お祝いに好きなものを作ってあげよう！バースデーケーキは当然として、ボーダーのミニチュアとか、どう？」"
+];
+
+var mashu_birthday = [
+"「お誕生日おめでとうございます。大変めでたいので、国を挙げての祭日にするべきではないでしょうか？」"
+];
+//var hokusai_birthday = [
+//"「うーん、誕生日って言うんかい。ご祝儀も無しでもうしわけねぇが…どれェ、ひとつ老けて丸く賢くなった顔を書かせてくれェ"ますたあ殿"」"
+//];
 
 var test = [
 "「マシュ ！」",
@@ -268,6 +285,13 @@ var test = [
       icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
             });
       });
+
+      //誕生日レスポンス
+
+      /*北斎*/
+
+
+
 
 
 };
