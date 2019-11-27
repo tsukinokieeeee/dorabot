@@ -497,7 +497,7 @@ var test = [
       as_user: false,
       text: response,
       username: "アストルフォ",
-      icon_url: "https://lh3.googleusercontent.com/nixGLriQjkwVMsDFk_B5MFpdLYp7vkN93su5Pv_rm9kYBsk92J0DSTMMY9vZYbfHYiI3Cg=s113",
+      icon_url: "https://lh3.googleusercontent.com/l8qmTzNyKebJVemvTapJgzM6wYFWDafCSAWvRJAC7uEVEabEXt60YTaR0HAVKuAHRX-3-Q=s95",
             });
       });
 
