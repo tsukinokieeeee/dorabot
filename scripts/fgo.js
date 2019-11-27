@@ -403,7 +403,7 @@ var test = [
 
       robot.hear(/おはよう|おは|朝/i,
             function(msg) {
-      var response = msg.random(housai_ohayou);
+      var response = msg.random(hokusai_ohayou);
       msg.send({
       as_user: false,
       text: response,
