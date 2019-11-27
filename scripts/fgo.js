@@ -225,6 +225,16 @@ var holmes_event = ["「新しい事件のようだ。さて……楽しませ�
 var astorfo_event =["「ねぇねぇ、マスター！なんかあるよ、行こう行こう！」",];
 
 
+var gudako = [
+"「ガチャァアア!!10連ガチャア!!いっぱいいっぱい回すのぉぉ!!」",
+"「溶けるぅう!!溶けちゃうう!!」",
+"「石は使い切った方がいいですよ。このイベントが終わるまでに」",
+"「よし、10連いっとくか!!」",
+"「先月のイベントガチャが生んだ負の遺産・・・・・・ガチャはもううんざりだ・・・・・かさばるから全部セイバーに食べさせるか・・・・・」",
+"「なすび」",
+];
+
+
 var test = [
 "「マシュ ！」",
 ];
@@ -498,6 +508,21 @@ var test = [
       text: response,
       username: "アストルフォ",
       icon_url: "https://lh3.googleusercontent.com/l8qmTzNyKebJVemvTapJgzM6wYFWDafCSAWvRJAC7uEVEabEXt60YTaR0HAVKuAHRX-3-Q=s95",
+            });
+      });
+
+
+
+      //ガチャ
+      /*ぐだ子*/
+      robot.hear(/ガチャ|石|10|召喚|マシュ|/i,
+            function(msg) {
+      var response = msg.random(gudako);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ぐだ子",
+      icon_url: "https://lh3.googleusercontent.com/zOTDxuwOVriiZMCamwCUbQzyI7K8vUndZOoNdNVLrLNYcBDfoMpdiO5TBLHG8dsD9U-tQA=s85",
             });
       });
 
