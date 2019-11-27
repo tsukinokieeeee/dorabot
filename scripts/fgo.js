@@ -411,7 +411,7 @@ var test = [
       icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
             });
       });
-      
+
       /*ホームズ*/
       robot.hear(/おはよう|おは|朝/i,
             function(msg) {
@@ -437,7 +437,7 @@ var test = [
       });
 
       //イベント
-      
+
             /*マーリン*/
       robot.hear(/イベント|新しい|イベ|box|BOX/i,
             function(msg) {
@@ -513,7 +513,7 @@ var test = [
 
 
 　　　　/*ぐだ子*/
-      robot.hear(/ガチャ|石|10|召喚|マシュ/i,
+      robot.hear(/ガチャ|石|10|召喚|マシュ|マスター|先輩/i,
             function(msg) {
       var response = msg.random(gudako);
       msg.send({
@@ -537,7 +537,7 @@ var test = [
             });
       });
 
-      
+
 
 
 
