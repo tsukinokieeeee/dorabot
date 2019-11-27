@@ -212,6 +212,19 @@ var hokusai_nemui = [
 "「おやすみかい？ うし、おれの布団を探すから待っとくれ〜。どれどれどこへ埋もれたやら…」",
 ];
 
+var hokusai_event = ["「巷じゃ珍奇なモンが見られるって聞いたよ。ますたあ殿、ちょいと顔を出してみないかい？」",];
+
+var mashu_event = ["「特殊事象の発生を確認……先輩、急ぎましょう。張り切ってレアゲットです！」",];
+
+var marine_event = ["「おや、異変が起きているね。またぞろ、異界からの訪問者かな。どうしてこう、可愛い女子だけが遊びに来るイベントじゃないんだろうね」",];
+
+var davinchi_event =["「ううん？何やら面白そうなイベントが開催されている。これは黙っていられないなぁ」",];
+
+var holmes_event = ["「新しい事件のようだ。さて……楽しませてくれるかな」",];
+
+var astorfo_event =["「ねぇねぇ、マスター！なんかあるよ、行こう行こう！」",];
+
+
 var test = [
 "「マシュ ！」",
 ];
@@ -401,6 +414,7 @@ var test = [
             });
       });
 
+      /*北斎*/
       robot.hear(/おはよう|おは|朝/i,
             function(msg) {
       var response = msg.random(hokusai_ohayou);
@@ -411,6 +425,83 @@ var test = [
       icon_url: "https://lh3.googleusercontent.com/hPZupyrDfG8RO9oVtMYklpl9qyjEfyQOMY6j16RIewPHJGs5tKTIP0imMv3aOpx7B3t6WxE=s97",
             });
       });
+
+      //イベント
+      
+            /*マーリン*/
+      robot.hear(/イベント|新しい|イベ|box|BOX/i,
+            function(msg) {
+      var response = msg.random(marine_event);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "マーリン",
+      icon_url: "https://lh3.googleusercontent.com/XZODRZI9mJEbzSz-oUyyz8dC13EzDLGXR53aqVn4WBBm1s2YS7LE9M1OcLcM0q27c4RQ9w=s85",
+            });
+      });
+
+            /*マシュ*/
+      robot.hear(/イベント|新しい|イベ|box|BOX/i,
+            function(msg) {
+      var response = msg.random(mashu_event);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "マシュ",
+      icon_url: "https://lh3.googleusercontent.com/5fYMoGCc-Uzt8rfm2HTDSSSmhqycdGhgOKq5mZlha32enEHYZ2Ci4eNd7FcsyOthKRxqe3k=s85",
+            });
+      });
+
+      /*ロリンチちゃん*/
+      robot.hear(/イベント|新しい|イベ|BOX|box/i,
+            function(msg) {
+      var response = msg.random(davinchi_event);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ロリンチちゃん",
+      icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
+            });
+      });
+
+
+      /*ホームズ*/
+      robot.hear(/イベント|新しい|イベ|BOX|box/i,
+            function(msg) {
+      var response = msg.random(holmes_event);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "ホームズ",
+      icon_url: "https://lh3.googleusercontent.com/oRtLKVU2lK6ErgoWbVEIShvQaJL-Fo4eBejX3ujUwnwBRnC9Rxgc5kokAwiOTo4i9NE_hoE=s85",
+            });
+      });
+
+      /*北斎*/
+      robot.hear(/イベント|新しい|イベ|box|BOX/i,
+            function(msg) {
+      var response = msg.random(hokusai_event);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "北斎",
+      icon_url: "https://lh3.googleusercontent.com/hPZupyrDfG8RO9oVtMYklpl9qyjEfyQOMY6j16RIewPHJGs5tKTIP0imMv3aOpx7B3t6WxE=s97",
+            });
+      });
+
+      /*アストルフォ*/
+      robot.hear(/イベント|新しい|イベ|box|BOX/i,
+            function(msg) {
+      var response = msg.random(astorfo_event);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "アストルフォ",
+      icon_url: "https://lh3.googleusercontent.com/D9hpSk9Pr_pRVQL8lkH6P2TdMMxn09Cc64VbKcaTDMAeKyX5xK_OWgQMWr-fJ_dxPF1rqqU=s170",
+            });
+      });
+
+
 
 　　　　
 　　　　//眠い
