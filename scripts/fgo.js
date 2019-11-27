@@ -512,10 +512,8 @@ var test = [
       });
 
 
-
-      //ガチャ
-      /*ぐだ子*/
-      robot.hear(/ガチャ|石|10|召喚|マシュ|/i,
+　　　　/*ぐだ子*/
+      robot.hear(/ガチャ|石|10|召喚|マシュ/i,
             function(msg) {
       var response = msg.random(gudako);
       msg.send({
@@ -526,10 +524,7 @@ var test = [
             });
       });
 
-
-
-　　　　
-　　　　//眠い
+　　　//眠い
       /*北斎*/
       robot.hear(/眠い|ネムネム|ねむねむ|疲れた|帰りたい/i,
             function(msg) {
