@@ -328,7 +328,7 @@ var test = [
       });
 
      /*ゴルゴドフ*/
-      robot.hear(/fgo|ゴルゴドフ|疲れた|眠い|帰りたい|はい|ムジーク|コヤン|肉|パンケーキ|食べる|お腹|すいた|fgoやりたい|最新情報を教えて/i,
+      robot.hear(/fgo|ゴルゴドフ|疲れた|眠い|帰りたい|はい|ムジーク|コヤン|肉|パンケーキ|食べる|お腹|すいた|所長|fgoやりたい|最新情報を教えて/i,
             function(msg) {
       var response = msg.random(goredolf);
       msg.send({
