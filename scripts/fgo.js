@@ -174,6 +174,30 @@ var goredolf  = [
 "「え？いや、そんな真顔で言うの？おまえさん、私と同じタイプじゃなかったの？」",
 ];
 
+var chin = [
+"「朕の手を煩わせるでない」",
+"「そう来たか！」",
+"「はっはっは！」",
+"「度し難いのう」",
+"「遊びは終わりか？」",
+"「平伏すが良いぞ」",
+"「天と地の狭間にて、人は斯く在るべしと、此処に新たなる法を敷く！」",
+"「三皇を超越し、五帝を凌駕せし覇者。それこそが始皇帝、即ち、朕である！」",
+"「いい加減にせんかっ！！」",
+"「無粋な！」",
+"「恐れ多いにも程がある！」",
+"「朕を誰だと心得る……戯(たわ)けが！！」",
+"「御前であるぞ！せめてうつ伏せに倒れよ」",
+"「ふむ、ちと外を散策したくなった。伴を許すゆえ、速やかに支度せよ」",
+"「好きなもの？ふむ、強いて言うなら、水銀かな。腐らず、乾かず、固まらず。永劫不滅を象徴するかのようなその在り方！まさしく、朕に相応しい美しさであろうよ」",
+"「何やら世間が騒がしい。よし、そなたを特使に任ずる。見聞し、つまびらかに報告せよ」",
+"「主従とな？…ああ、確かに其方は、今や朕の一番の家臣だな。魔力を尽くして朕をこの汎人類史に現界せしめるもてなしぶり。まさに！忠義の鑑であるぞ」",
+"「まこと度し難き衆生よな」",
+"「ほほう。そこまで朕の本気を見たいと申すか。愛(う)い奴め。もっともっと貢ぐが良いぞ！」",
+"「天晴(あっぱれ)なり！帝を称える其方の献身、しかと見届けた。よって我が真骨頂の開帳を許す。光栄に思うが良いぞ！」",
+"「天と地の狭間にて、人は斯く在るべしと、此処に新たなる法を敷く！」",
+];
+
 /*おつかれさま*/
 var mashu_otsukaresama = [
 "「行ってきます、マスター」",
@@ -193,6 +217,10 @@ var muniel_otsukaresama = [
 
 var holmes_otsukaresama = [
 "「……さて。最後に、私から一つ質問していいだろうか？なぜ君は帰宅できると思っているのか？まさかとは思うが―――」",
+];
+
+var chin_otsukaresama = [
+"「うむ、大義である！」",
 ];
 
 /*おはよう*/
@@ -218,6 +246,10 @@ var holmes_ohayou = [
 
 var hokusai_ohayou = [
 "「よう、羽振りがいいねえ、ますたあ殿」",
+];
+
+var chin_ohayou = [
+"「うむ、大義である！」",
 ];
 
 /*眠い*/
@@ -316,7 +348,7 @@ var test = [
       });
 
       /*北斎*/
-      robot.hear(/fgo|北斎|栄|葛飾|はい|三十六|神奈川|富士|父様|とと|さま|筆|墨|fgoやりたい|最新情報を教えて/i,
+      robot.hear(/fgo|北斎|栄|葛飾|はい|3|10|6|三十六|疲れた|いいえ|帰りたい|神奈川|富士|父様|とと|さま|筆|墨|fgoやりたい|最新情報を教えて/i,
             function(msg) {
       var response = msg.random(hokusai);
       msg.send({
@@ -336,6 +368,18 @@ var test = [
       text: response,
       username: "ゴルゴドフ",
       icon_url: "https://lh3.googleusercontent.com/wmnxz54oTrjJVYS_CQSdzRKtgIqYVIzdsvu0jzwUZ3QXp6o1nZjiB_6fQowOlXL3v6ZR5g=s85",
+            });
+      });
+
+      /*朕*/
+      robot.hear(/fgo|始皇帝|朕|エンペラー|ラスト|疲れた|眠い|帰りたい|はい|中華|民|男|女|皇帝|fgoやりたい|最新情報を教えて/i,
+            function(msg) {
+      var response = msg.random(chin);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "始皇帝",
+      icon_url: "https://lh3.googleusercontent.com/EMQlgcfKqql5FDoAiSaK8FFZYGSLhYuQiDQFtB0sSPd7MFHVVnumrRt7vb6Z0D8w6PQnkDY=s85",
             });
       });
 
@@ -399,6 +443,17 @@ var test = [
       icon_url: "https://lh3.googleusercontent.com/oRtLKVU2lK6ErgoWbVEIShvQaJL-Fo4eBejX3ujUwnwBRnC9Rxgc5kokAwiOTo4i9NE_hoE=s85",
             });
       });
+      /*朕*/
+      robot.hear(/お疲れ様|おつかれさま|おつ|バイバイ|バイ/i,
+            function(msg) {
+      var response = msg.random(chin_otsukaresama);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "始皇帝",
+      icon_url: "https://lh3.googleusercontent.com/EMQlgcfKqql5FDoAiSaK8FFZYGSLhYuQiDQFtB0sSPd7MFHVVnumrRt7vb6Z0D8w6PQnkDY=s85",
+            });
+      });
 
 
       //おはようレスポンス
@@ -460,6 +515,17 @@ var test = [
       text: response,
       username: "北斎",
       icon_url: "https://lh3.googleusercontent.com/hPZupyrDfG8RO9oVtMYklpl9qyjEfyQOMY6j16RIewPHJGs5tKTIP0imMv3aOpx7B3t6WxE=s97",
+            });
+      });
+      /*朕*/
+      robot.hear(/おはよう|おは|朝/i,
+            function(msg) {
+      var response = msg.random(chin_ohayou);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "始皇帝",
+      icon_url: "https://lh3.googleusercontent.com/EMQlgcfKqql5FDoAiSaK8FFZYGSLhYuQiDQFtB0sSPd7MFHVVnumrRt7vb6Z0D8w6PQnkDY=s85",
             });
       });
 
@@ -540,7 +606,7 @@ var test = [
 
 
 　　　　/*ぐだ子*/
-      robot.hear(/ガチャ|石|10|召喚|マシュ|マスター|先輩/i,
+      robot.hear(/ガチャ|石|10|召喚|マシュ|マスター|先輩|fgo/i,
             function(msg) {
       var response = msg.random(gudako);
       msg.send({
