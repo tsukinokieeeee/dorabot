@@ -388,7 +388,7 @@ var test = [
       });
 
       /*マンドリカルド*/
-      robot.hear(/fgo|疲れた|眠い|帰りたい|はい|マイフレンド|友|とも|は|が|に|fgoやりたい|最新情報を教えて/i,
+      robot.hear(/fgo|マンドリカルド|疲れた|眠い|帰りたい|はい|マイフレンド|友|とも|は|が|に|fgoやりたい|最新情報を教えて/i,
             function(msg) {
       var response = msg.random(mandricardo);
       msg.send({
