@@ -198,6 +198,23 @@ var chin = [
 "「天と地の狭間にて、人は斯く在るべしと、此処に新たなる法を敷く！」",
 ];
 
+var mandricardo = [
+"「そんじゃまあやりますか、っと」",
+"「戦闘っすね。まぁやれるだけやってみます」",
+"「陰キャらしくそれなりに頑張りますよ、っと」",
+"「それなりにやりますよっと」",
+"「マンドリカルド、よろしくーっす」",
+"「耐えろぉぉぉぉ！」",
+"「陰キャが言うのもあれっすけど、そろそろ出たほうが良いっすね」",
+"「まぁ、お互い持ちつ持たれつってことで。んー、特に不自由ってことはないっすね」",
+"「ああ、陰キャ系なんで、構わなくて良いっすよ」",
+"「どうしたマスター。ここは寒々しい日陰っすよ。なんてな」",
+"「マスターはつくづく面白いやつっすねー。しかしまぁ、こんなに気が合う馬が合うってのは久しぶり……いや、下手すりゃ初めてか」",
+"「おっと我がマスター、いい所で会った。さっきブーディカさんからこっそり菓子を貰ったんだ。ここは1つ、証拠隠滅に協力してくれねえすか？」",
+"「マスター。変な関係だけど、これからもよろしくってことで」",
+"「もし本当にマスターの言う通りだったとしたら……。生まれて初めて俺は、俺が心底から誇らしいね。教えてくれてありがたいっす、マスター」",
+];
+
 /*おつかれさま*/
 var mashu_otsukaresama = [
 "「行ってきます、マスター」",
@@ -255,22 +272,8 @@ var chin_ohayou = [
 /*眠い*/
 var hokusai_nemui = [
 "「仕事だよ、ますたぁ殿」",
-"「締め切りだの細けぇ注文だのうるせえ版元も、いなけりゃいねえで往生するから悩ましいよなぁ」",
 "「おやすみかい？ うし、おれの布団を探すから待っとくれ〜。どれどれどこへ埋もれたやら…」",
 ];
-
-var hokusai_event = ["「巷じゃ珍奇なモンが見られるって聞いたよ。ますたあ殿、ちょいと顔を出してみないかい？」",];
-
-var mashu_event = ["「特殊事象の発生を確認……先輩、急ぎましょう。張り切ってレアゲットです！」",];
-
-var marine_event = ["「おや、異変が起きているね。またぞろ、異界からの訪問者かな。どうしてこう、可愛い女子だけが遊びに来るイベントじゃないんだろうね」",];
-
-var davinchi_event =["「ううん？何やら面白そうなイベントが開催されている。これは黙っていられないなぁ」",];
-
-var holmes_event = ["「新しい事件のようだ。さて……楽しませてくれるかな」",];
-
-var astorfo_event =["「ねぇねぇ、マスター！なんかあるよ、行こう行こう！」",];
-
 
 var gudako = [
 "「ガチャで運よく強力なレアキャラを手に入れたとします。しかしそこからレベルアップ作業という名の本当の地獄が始まるんですよ」「そしてレベルマになってもスキルマじゃないとフレンドさんは使ってくれないという現実を見るのです」",
@@ -349,7 +352,7 @@ var test = [
       });
 
       /*北斎*/
-      robot.hear(/fgo|北斎|栄|葛飾|はい|3|10|6|三十六|疲れた|いいえ|帰りたい|神奈川|富士|父様|とと|さま|筆|墨|fgoやりたい|最新情報を教えて/i,
+      robot.hear(/fgo|北斎|栄|葛飾|はい|3|10|6|三十六|疲れた|いいえ|帰りたい|神奈川|富士|父様|ととさま|たこ|タコ|墨|fgoやりたい|最新情報を教えて/i,
             function(msg) {
       var response = msg.random(hokusai);
       msg.send({
@@ -360,14 +363,14 @@ var test = [
             });
       });
 
-     /*ゴルゴドフ*/
-      robot.hear(/fgo|ゴルゴドフ|疲れた|眠い|帰りたい|はい|ムジーク|コヤン|肉|パンケーキ|食べる|お腹|すいた|所長|fgoやりたい|最新情報を教えて/i,
+     /*ゴルドルフ*/
+      robot.hear(/fgo|ゴルドルフ|疲れた|眠い|帰りたい|はい|ムジーク|コヤン|肉|パンケーキ|食べる|お腹|すいた|所長|fgoやりたい|最新情報を教えて/i,
             function(msg) {
       var response = msg.random(goredolf);
       msg.send({
       as_user: false,
       text: response,
-      username: "ゴルゴドフ",
+      username: "ゴルドルフ",
       icon_url: "https://lh3.googleusercontent.com/wmnxz54oTrjJVYS_CQSdzRKtgIqYVIzdsvu0jzwUZ3QXp6o1nZjiB_6fQowOlXL3v6ZR5g=s85",
             });
       });
@@ -381,6 +384,18 @@ var test = [
       text: response,
       username: "始皇帝",
       icon_url: "https://lh3.googleusercontent.com/EMQlgcfKqql5FDoAiSaK8FFZYGSLhYuQiDQFtB0sSPd7MFHVVnumrRt7vb6Z0D8w6PQnkDY=s85",
+            });
+      });
+
+      /*マンドリカルド*/
+      robot.hear(/fgo|疲れた|眠い|帰りたい|はい|マイフレンド|友|とも|は|が|に|fgoやりたい|最新情報を教えて/i,
+            function(msg) {
+      var response = msg.random(mandricardo);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "マンドリカルド",
+      icon_url: "https://lh3.googleusercontent.com/cdttZ0Z1diwfVaB9knkepPs-qUxZpK8Ltn_zaXJmBSz0UpPrXe0E6LzFhUhzg_ADL406=s85",
             });
       });
 
@@ -529,82 +544,6 @@ var test = [
       icon_url: "https://lh3.googleusercontent.com/EMQlgcfKqql5FDoAiSaK8FFZYGSLhYuQiDQFtB0sSPd7MFHVVnumrRt7vb6Z0D8w6PQnkDY=s85",
             });
       });
-
-      //イベント
-
-            /*マーリン*/
-      robot.hear(/イベント|新しい|イベ|box|BOX/i,
-            function(msg) {
-      var response = msg.random(marine_event);
-      msg.send({
-      as_user: false,
-      text: response,
-      username: "マーリン",
-      icon_url: "https://lh3.googleusercontent.com/XZODRZI9mJEbzSz-oUyyz8dC13EzDLGXR53aqVn4WBBm1s2YS7LE9M1OcLcM0q27c4RQ9w=s85",
-            });
-      });
-
-            /*マシュ*/
-      robot.hear(/イベント|新しい|イベ|box|BOX/i,
-            function(msg) {
-      var response = msg.random(mashu_event);
-      msg.send({
-      as_user: false,
-      text: response,
-      username: "マシュ",
-      icon_url: "https://lh3.googleusercontent.com/5fYMoGCc-Uzt8rfm2HTDSSSmhqycdGhgOKq5mZlha32enEHYZ2Ci4eNd7FcsyOthKRxqe3k=s85",
-            });
-      });
-
-      /*ロリンチちゃん*/
-      robot.hear(/イベント|新しい|イベ|BOX|box/i,
-            function(msg) {
-      var response = msg.random(davinchi_event);
-      msg.send({
-      as_user: false,
-      text: response,
-      username: "ロリンチちゃん",
-      icon_url: "https://lh3.googleusercontent.com/c93yHZ3GqNWQAXqJCwWoql6F2dnWkRcu3vy4aDCsVaiX_PehudJCvHU74zAeFGhsrSi1XkM=s85",
-            });
-      });
-
-
-      /*ホームズ*/
-      robot.hear(/イベント|新しい|イベ|BOX|box/i,
-            function(msg) {
-      var response = msg.random(holmes_event);
-      msg.send({
-      as_user: false,
-      text: response,
-      username: "ホームズ",
-      icon_url: "https://lh3.googleusercontent.com/oRtLKVU2lK6ErgoWbVEIShvQaJL-Fo4eBejX3ujUwnwBRnC9Rxgc5kokAwiOTo4i9NE_hoE=s85",
-            });
-      });
-
-      /*北斎*/
-      robot.hear(/イベント|新しい|イベ|box|BOX/i,
-            function(msg) {
-      var response = msg.random(hokusai_event);
-      msg.send({
-      as_user: false,
-      text: response,
-      username: "北斎",
-      icon_url: "https://lh3.googleusercontent.com/hPZupyrDfG8RO9oVtMYklpl9qyjEfyQOMY6j16RIewPHJGs5tKTIP0imMv3aOpx7B3t6WxE=s97",
-            });
-      });
-
-      /*アストルフォ*/
-      robot.hear(/イベント|新しい|イベ|box|BOX/i,
-            function(msg) {
-      var response = msg.random(astorfo_event);
-      msg.send({
-      as_user: false,
-      text: response,
-      username: "アストルフォ",
-      icon_url: "https://lh3.googleusercontent.com/l8qmTzNyKebJVemvTapJgzM6wYFWDafCSAWvRJAC7uEVEabEXt60YTaR0HAVKuAHRX-3-Q=s95",
-            });
-      });
-
 
 　　　　/*ぐだ子*/
       robot.hear(/ガチャ|石|10|召喚|マシュ|マスター|先輩|fgo|はい/i,
