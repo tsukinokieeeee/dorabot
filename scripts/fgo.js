@@ -410,6 +410,18 @@ var test = [
             });
       });
 
+      /*エレシュキガル*/
+      robot.hear(/fgo|エレシュキガル|エレ|疲れた|イシュタル|帰りたい|はい|は|が|に|fgo|を|最新情報を教えて/i,
+            function(msg) {
+      var response = msg.random(ereshkigal);
+      msg.send({
+      as_user: false,
+      text: response,
+      username: "エレシュキガル",
+      icon_url: "https://lh3.googleusercontent.com/mxx36aI7XQ4I-jmzokEFdN5somSN8I7Rnl_liFAYuSSMJ-Aiy_oDMux826YI7D3iB9dBB70=s85",
+            });
+      });
+
       //お疲れ様レスポンス
             /*マーリン*/
       robot.hear(/お疲れ様|おつかれさま|おつ|バイバイ|バイ/i,
